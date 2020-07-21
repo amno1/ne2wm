@@ -3,9 +3,9 @@
 .SUFFIXES: .el .elc .eln
 
 SRCS := $(wildcard *.el)
-
-LISPINCL ?= $(addprefix -L ,${HOME}/.emacs.d/lisp)
-LISPINCL += -L .
+LISPINCL ?= $(addprefix -L ,.)
+LISPINCL += $(addprefix -L ,${HOME}/.emacs.d/lisp)
+LISPINCL += $(addprefix -L ,${HOME}/.emacs.d/elpa)
 LISPINCL += $(addprefix -L ,${HOME}/.emacs.d/elpa/sauron-*)
 
 INSTALELN ?= $(${HOME}/.emacs.d/lisp/eln-*)
@@ -44,12 +44,7 @@ install-all: install install-native
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/lisp/ne2wm-*
-
-uninstall-native:
 	rm -f $(DESTDIR)$(PREFIX)/lisp/eln-*/ne2wm-*
-
-
-uninstall-all: uninstall uninstall-native
 
 clean:
 	rm -rf *.elc eln-*
