@@ -75,7 +75,7 @@ This plugin provides two things:
               (e2wm:pst-get-wm))))
     (and wm
          ne2wm:c-plugin-org-clock-enable
-         (loop for wname in (mapcar 'wlf:window-name (wlf:wset-winfo-list wm))
+         (cl-loop for wname in (mapcar 'wlf:window-name (wlf:wset-winfo-list wm))
                if (eq 'org-clock (e2wm:pst-window-plugin-get wm wname))
                return wname))))
 
@@ -112,10 +112,10 @@ This plugin provides two things:
     (save-excursion
       (with-current-buffer buf
         (erase-buffer)
-        (loop for head in nodes
+        (cl-loop for head in nodes
               for n from 1
               for stars = (mapconcat 'identity
-                                     (loop for i from 1 to n collect "*") "")
+                                     (cl-loop for i from 1 to n collect "*") "")
               do (insert stars " " head "\n"))))))
 
 

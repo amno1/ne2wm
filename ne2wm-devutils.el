@@ -22,7 +22,7 @@
 
 ;;; Code:
 
-(eval-when-compile (require 'cl))
+(eval-when-compile (require 'cl-lib))
 (require 'e2wm)
 
 
@@ -65,7 +65,7 @@
   (let ((buffer (get-buffer-create "*ne2wm:devutils-list-plugins*")))
     (with-current-buffer buffer
       (erase-buffer)
-      (loop for p in e2wm:plugin-list
+      (cl-loop for p in e2wm:plugin-list
             for name = (e2wm:$plugin-name p)
             for title = (e2wm:$plugin-title p)
             for update = (e2wm:$plugin-update p)

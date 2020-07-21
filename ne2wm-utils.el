@@ -22,7 +22,7 @@
 
 ;;; Code:
 
-(eval-when-compile (require 'cl))
+(eval-when-compile (require 'cl-lib))
 (require 'e2wm)
 (require 'e2wm-vcs)
 
@@ -179,7 +179,7 @@ Currently, only Magit (Git) and Monky (Mercurial) are supported."
 
 (defun ne2wm:win-ring-rotate ()
   (interactive)                         ; FIXME: use prefix arg
-  (loop with ring = (ne2wm:win-ring-get)
+  (cl-loop with ring = (ne2wm:win-ring-get)
         for wname in ring
         for buf in (ne2wm:rorate-list (mapcar #'e2wm:pst-buffer-get ring))
         do (e2wm:pst-buffer-set wname buf))
@@ -198,7 +198,7 @@ Examples:
   (ne2wm:find-next-in-seq '(a b c d) 'b 2)   ; => d
   (ne2wm:find-next-in-seq '(a b c d) 'b -1)  ; => a
 "
-  (nth (loop for current in seq
+  (nth (cl-loop for current in seq
              for i from 0
              when (eql current item)
              return (mod (funcall (if reverse #'- #'+) i (or offset 1))
@@ -232,7 +232,7 @@ M-2) is given, switch with the ARG-th next window."
   "[internal] Find neighbor of ITEM in SEQ."
   (when reverse
     (setq seq (reverse seq)))
-  (loop for previous = current
+  (cl-loop for previous = current
         for current in seq
         for next in (cdr seq)
         if (eq current item)
@@ -259,7 +259,7 @@ When the prefix argument is given, show in the previous window."
   "Return current window name if it is found in WNAME-LIST."
   (let ((wm (e2wm:pst-get-wm))
         (curwin (selected-window)))
-    (loop for wname in wname-list
+    (cl-loop for wname in wname-list
           when (eql curwin (wlf:get-window wm wname))
           return wname)))
 
@@ -267,7 +267,7 @@ When the prefix argument is given, show in the previous window."
   "Return current window name."
   (let ((wm (e2wm:pst-get-wm))
         (curwin (selected-window)))
-    (loop for winfo in (wlf:wset-winfo-list wm)
+    (cl-loop for winfo in (wlf:wset-winfo-list wm)
           for wname = (wlf:window-name winfo)
           when (eql curwin (wlf:get-window wm wname))
           return wname)))

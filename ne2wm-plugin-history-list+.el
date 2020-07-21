@@ -22,7 +22,7 @@
 
 ;;; Code:
 
-(eval-when-compile (require 'cl)
+(eval-when-compile (require 'cl-lib)
                    (require 'howm nil t))
 (require 'e2wm)
 (require 'ne2wm-utils)
@@ -127,12 +127,12 @@ Example: '(\"<--\" \"-->\")."
          (wname-list (ne2wm:def-plugin-history-list+-wname-list-get))
          (line-format
           (format "%%%ds %%2s %%s %%s\n"
-                  (loop for s in pointer-list
+                  (cl-loop for s in pointer-list
                         sum (length s))))
          (space-list
-          (loop for pointer in pointer-list
+          (cl-loop for pointer in pointer-list
                 for len = (length pointer)
-                collect (apply #'concat (loop for -no-use- from 1 to len
+                collect (apply #'concat (cl-loop for -no-use- from 1 to len
                                               collect " "))))
         current-pos)
     (unless (and buf (buffer-live-p buf))
@@ -160,7 +160,7 @@ Example: '(\"<--\" \"-->\")."
                    (second-buf (nth 1 buf-list))
                    (third-buf  (nth 2 buf-list))
                    (cnt 1))
-              (loop for h in (append history-backup history)
+              (cl-loop for h in (append history-backup history)
                     for name =
                     (ne2wm:def-plugin-history-list+-pretty-buffer-name h)
                     do (insert
@@ -170,7 +170,7 @@ Example: '(\"<--\" \"-->\")."
                            line-format
                            (apply
                             #'concat
-                            (loop for buf in buf-list
+                            (cl-loop for buf in buf-list
                                   for pointer in pointer-list
                                   for space in space-list
                                   collect (if (eql h buf) pointer space)))

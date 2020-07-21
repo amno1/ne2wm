@@ -26,7 +26,7 @@
 
 ;;; Code:
 
-(eval-when-compile (require 'cl))
+(eval-when-compile (require 'cl-lib))
 (require 'e2wm-vcs)
 
 (defvar ne2wm:def-plugin-vcs-backends
@@ -54,7 +54,7 @@ following keys:
   "You may set this to `e2wm:history-get-main-buffer'.")
 
 (defun ne2wm:def-plugin-vcs-top-dir-all (cwd)
-  (loop for (name . props) in ne2wm:def-plugin-vcs-backends
+  (cl-loop for (name . props) in ne2wm:def-plugin-vcs-backends
         for func = (plist-get props :get-top-dir)
         when (and (functionp func)
                   (funcall func cwd))
