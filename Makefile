@@ -47,6 +47,10 @@ uninstall:
 
 uninstall-native:
 	rm -f $(DESTDIR)$(PREFIX)/lisp/eln-*/ne2wm-*
+
+
+uninstall-all: uninstall uninstall-native
+
 clean:
 	rm -rf *.elc eln-*
 
