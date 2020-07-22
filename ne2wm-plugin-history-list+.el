@@ -188,7 +188,7 @@ Example: '(\"<--\" \"-->\")."
                            (t
                             'ne2wm:face-history-list+-normal)))
                          'e2wm:buffer h))
-                    (incf cnt))
+                    (cl-incf cnt))
               (goto-char current-pos)
               (setq mode-line-format
                     ne2wm:c-plugin-history-list+-mode-line-format)

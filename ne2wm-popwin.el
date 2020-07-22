@@ -31,11 +31,11 @@
   "Return non-nil when the BUFFER is set to nonselect in popwin setting.
 
 Almost all of the code is borrowed from `popwin:display-buffer-1'."
-  (loop with name = (buffer-name buffer)
+  (cl-loop with name = (buffer-name buffer)
         with mode = (buffer-local-value 'major-mode buffer)
         for config in popwin:special-display-config
         for (pattern . keywords) = (popwin:listify config)
-        do (destructuring-bind
+        do (cl-destructuring-bind
                (&key regexp width height position noselect dedicated stick)
                keywords
              (when (cond ((eq pattern t) t)

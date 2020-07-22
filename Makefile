@@ -30,7 +30,7 @@ fix-cl:
 
 compile: fix-cl ${patsubst %.el, %.elc, $(SRCS)}
 
-native: ${patsubst %.el, %.eln, $(SRCS)}
+native: fix-cl ${patsubst %.el, %.eln, $(SRCS)}
 
 install:
 	mkdir -p $(DESTDIR)$(PREFIX)/lisp
