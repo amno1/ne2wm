@@ -1,4 +1,4 @@
-;;; ne2wm-toggle-core.el --- buffer-toggling utilities for e2wm
+;;; ne2wm-toggle-core.el --- buffer-toggling utilities for e2wm  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 

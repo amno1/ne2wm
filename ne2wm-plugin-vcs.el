@@ -1,4 +1,4 @@
-;;; ne2wm-plugin-vcs.el --- Plugins for VCS (git, hg, ...)
+;;; ne2wm-plugin-vcs.el --- Plugins for VCS (git, hg, ...)  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2013 Takafumi Arakaki
 

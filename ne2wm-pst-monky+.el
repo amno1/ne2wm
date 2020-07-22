@@ -1,4 +1,4 @@
-;;; ne2wm-pst-monky+.el --- monky+ perspective
+;;; ne2wm-pst-monky+.el --- monky+ perspective  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 

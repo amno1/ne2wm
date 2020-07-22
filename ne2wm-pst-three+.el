@@ -1,4 +1,4 @@
-;;; ne2wm-pst-three+.el --- three+ perspective
+;;; ne2wm-pst-three+.el --- three+ perspective  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 

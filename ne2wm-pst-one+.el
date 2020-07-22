@@ -1,4 +1,4 @@
-;;; ne2wm-pst-one+.el --- one+ perspective
+;;; ne2wm-pst-one+.el --- one+ perspective  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 

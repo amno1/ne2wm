@@ -1,4 +1,4 @@
-;;; ne2wm-devutils.el --- development tools
+;;; ne2wm-devutils.el --- development tools  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 

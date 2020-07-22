@@ -1,4 +1,4 @@
-;;; ne2wm-pst-vc-annotate.el --- a perspective to use vc-annotate command
+;;; ne2wm-pst-vc-annotate.el --- a perspective to use vc-annotate command  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 

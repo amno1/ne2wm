@@ -1,4 +1,4 @@
-;;; ne2wm-pst-magit+.el --- magit+ perspective
+;;; ne2wm-pst-magit+.el --- magit+ perspective  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 

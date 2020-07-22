@@ -1,4 +1,4 @@
-;;; ne2wm-buffer-p.el --- ne2wm:*-buffer-p functions
+;;; ne2wm-buffer-p.el --- ne2wm:*-buffer-p functions -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 

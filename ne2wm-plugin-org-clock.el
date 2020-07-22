@@ -1,4 +1,4 @@
-;;; ne2wm-plugin-org-clock.el --- org-clock plugin
+;;; ne2wm-plugin-org-clock.el --- org-clock plugin  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 

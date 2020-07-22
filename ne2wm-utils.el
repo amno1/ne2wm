@@ -1,4 +1,4 @@
-;;; ne2wm-utils.el --- utility functions
+;;; ne2wm-utils.el --- utility functions  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 

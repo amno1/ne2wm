@@ -1,4 +1,4 @@
-;;; ne2wm-setup.el --- Load all plugin/perspectives in ne2wm
+;;; ne2wm-setup.el --- Load all plugin/perspectives in ne2wm  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 

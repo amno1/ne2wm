@@ -1,4 +1,4 @@
-;;; ne2wm-plugin-codethumb.el --- Short summary
+;;; ne2wm-plugin-codethumb.el --- Short summary  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012 Takafumi Arakaki
 

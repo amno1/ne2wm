@@ -1,4 +1,4 @@
-;;; ne2wm-popwin.el --- popwin integration
+;;; ne2wm-popwin.el --- popwin integration  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 

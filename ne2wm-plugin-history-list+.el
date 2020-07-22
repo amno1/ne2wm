@@ -1,4 +1,4 @@
-;;; ne2wm-plugin-history-list+.el --- history-list plugin for many windows
+;;; ne2wm-plugin-history-list+.el --- history-list plugin for many windows  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2012  Takafumi Arakaki
 
